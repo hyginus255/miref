@@ -1,0 +1,66 @@
+.header{
+
+    padding: 20px 0;
+
+    > nav{
+        padding: 0 32px;
+        max-width : 1280px;
+        margin:0 auto;
+    }
+
+    &__logo{
+        img{
+            
+        }
+    }
+
+    &__menu{//mobile menu
+        > span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: $gray-900;
+            transition: all 300ms ease-in-out;
+            transform-origin: left center;
+
+            &:not(:last-child){
+                margin-bottom: 4px;
+            }
+        }
+
+        &.open{
+
+            > span:first-child{
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2){
+                opacity: 0;
+            }
+
+            >span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+    &__links{
+        a{
+            color: $gray-500;
+            font-size: $text-md;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 24px;
+
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &:hover{
+                color:$primary-500;
+                transition: color 200ms ease-in-out;
+            }
+        }
+    }
+}

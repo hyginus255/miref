@@ -1,0 +1,94 @@
+.newsletter{
+
+    @include breakpoint-up(large){
+        padding-bottom: 0px;
+    }
+    
+    &__card{
+
+        background-color: $primary-400;
+        border-radius: 1rem;
+        padding: 40px 24px;
+
+        > div{
+
+            @include breakpoint-up(large){
+                max-width: 670px;
+                margin:64px auto;
+            }
+
+        }
+
+
+        h5{
+            
+            color:$white;
+            margin-bottom: 8px;
+
+            @include breakpoint-up(large){
+                text-align: center;
+            }
+            
+        }
+
+        p{
+            color: $primary-50;
+            @include breakpoint-up(large){
+                text-align: center;
+            }
+        }
+
+        form{
+
+            flex-direction: column;
+            margin-top: 32px;
+
+            @include breakpoint-up(large){
+                margin-top: 48px;
+                flex-direction: row;
+            }
+        }
+
+       
+
+        input[type=text] {
+
+            margin-top: 8px;
+
+            @include breakpoint-up(large){
+                margin-right: 8px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                height: 50px;
+            }
+        }
+
+    }
+
+    &__submit{
+        width: 100%;
+        margin-top: 20px;
+        @include breakpoint-up(large){
+            margin-top: 0px;
+            margin-left: 8px;
+            width: auto;
+        }
+        
+    }
+
+    &__help_text{
+        
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 8px;
+
+        @include breakpoint-up(large){
+            font-size: 14px;
+            line-height: 20px;
+            text-align: left!important;
+            margin-top: 12px;
+        }
+
+    }
+
+}

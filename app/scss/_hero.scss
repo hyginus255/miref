@@ -1,5 +1,7 @@
 .hero{
 
+    position: relative;
+
     @include breakpoint-up(large){
         padding-bottom: 0px;
     }
@@ -64,5 +66,11 @@
             background-image: url("/assets/Images/home_hero_image.svg");
             height: 604px;
         }
+    }
+
+    &__blur{
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }

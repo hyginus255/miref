@@ -1,0 +1,40 @@
+.social_proof{
+
+    padding-top: 0px;
+    
+    @include breakpoint-up(large){
+        padding-top: 96px;
+    }
+
+    &__content{
+        text-align: center;
+
+        p{
+            color: $gray-500
+        }
+    }
+
+    &__logos{
+        justify-content:center;
+        align-items: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        height: 5rem;
+
+        @include breakpoint-up(large){
+            justify-content:space-between;
+            height: 2.75rem;
+            margin-top: 2.5rem;
+        }
+
+        > img {
+            height: 1.75rem;
+            width: auto;
+            padding: 0px 4px;
+
+            @include breakpoint-up(large){
+                height: 2.75rem;
+            }
+        }
+    }
+}

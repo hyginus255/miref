@@ -1,0 +1,106 @@
+.features{
+    background-color: $gray-50;
+
+    p{
+        color:$gray-500;
+        font-weight: 300;
+        margin-top: 1rem;
+
+    }
+
+    &__heading{
+
+        p{
+            margin-top: 1rem;
+        }
+
+    }
+
+    &__item, &__item_2{
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+            margin-top: 6rem;
+        }
+
+    }
+
+    &__item_2{
+
+        @include breakpoint-up(large){
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__item_text, &__item_text_2{
+
+        p{
+            margin-top: 0.5rem;
+        }
+        img{
+            margin-bottom: 1.5rem;
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+            margin-right: 6rem;
+        }
+    }
+
+    &__item_text_2{
+
+        @include breakpoint-up(large){
+            margin-right: 0px;
+            margin-left: 6rem;
+        }
+    }
+
+    &__image_1, &__image_2{
+        height: 16.19rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 40px;
+
+        @include breakpoint-up(large){
+            flex: 1;
+            height: 32rem;
+            margin-top: 0px;
+        }
+    }
+
+    &__image_1{
+
+        background-image: url("/assets/Images/feature_image_mobile_1.svg");
+
+        @include breakpoint-up(large){
+            background-image: url("/assets/Images/feature_image_web_1.svg");
+        }
+    }
+
+    &__image_2{
+
+        background-image: url("/assets/Images/Refferer_Dashboard_mobile.svg");
+
+        @include breakpoint-up(large){
+
+            background-image: url("/assets/Images/feature_image_web_1.svg");
+        }
+    }
+
+    &__list{
+
+        align-items: center;
+
+        img{
+            margin-right: 1.5rem;
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
+    }
+}

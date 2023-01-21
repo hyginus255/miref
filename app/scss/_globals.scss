@@ -11,7 +11,7 @@ html{
 body{
     margin:0;
     padding:0;
-    line-height: 1.2;
+    line-height: 1.5rem;
     font-size: $text-xl;
     font-family: 'Inter', sans-serif;
 }
@@ -24,11 +24,15 @@ a, a:visited, a:hover{
 
 p{
     margin:0;
+    line-height: 1.5rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.4;
   color: $gray-900;
@@ -43,6 +47,26 @@ h1{
         font-size: 3.75rem;
         font-weight: 700;
         line-height: 1.2;
+    }
+}
+
+h3{
+    font-size: 1.875rem;
+    letter-spacing: 0px;
+
+    @include breakpoint-up(large){
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+h5{
+    font-size: 1.5rem;
+    line-height:  2rem;
+    @include breakpoint-up(large){
+        font-size: 1.875rem;
+        line-height:  2.375rem;
     }
 }
 
@@ -88,9 +112,14 @@ h1{
     }
 }
 
+//text align center
+.text-center{
+    text-align: center;
+}
+
 //buttons
 
-.btn-primary-xl{
+.btn-primary, .btn-secondary{
     padding:0.75rem 1.75rem;
     border-radius: 8px;
     cursor: pointer;
@@ -112,6 +141,33 @@ h1{
         border: 1px solid $primary-300;
         transition: color 200ms ease-in-out;
     }
+}
+
+.btn-secondary{
+    color: $white;
+    background-color: $primary-300;
+    border: 1px solid $primary-25;
+
+    &:hover{
+        color: $primary-500;
+        background-color: $white;
+        border: 1px solid $primary-25;
+        transition: color 200ms ease-in-out;
+    }
+}
+
+
+//input
+
+.input{
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 8px;
+    border:none;
+    height: 44px;
+    font-size: 16px;
+    line-break: 24px;
+    color: $gray-900;
 }
 
 // Visibility

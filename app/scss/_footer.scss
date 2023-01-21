@@ -1,0 +1,102 @@
+.footer{
+
+    &__top{
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+        }
+
+    }
+
+    &__links_container{
+    
+        @include breakpoint-up(large){
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    &__brand{
+
+        gap:16px;
+        margin-bottom: 48px;
+        align-items: flex-start;
+        
+        img{
+            height: 30px;
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color : $gray-500;
+        }
+
+    }
+
+    &__links_content{
+        gap: 40px;
+
+        @include breakpoint-up(large){
+            
+            justify-content: space-evenly;
+            width: 100%;
+        }
+    }
+
+    &__links_column{
+
+        gap:16px;
+
+        p{
+            font-size: 14px;
+            color: $gray-400;
+            line-height: 20px;
+            font-weight: 600;
+
+        }
+
+        a{
+            color: $gray-500;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+
+            &:hover{
+                color:$primary-500;
+            }
+        }
+    }
+
+    &__links{
+        gap:12px;
+        margin-bottom: 32px;
+    }
+    
+    &__bottom{
+
+        flex-direction: column-reverse;
+        margin-top: 24px;
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        p{
+            margin-top: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            color : $gray-500;
+
+            @include breakpoint-up(large){
+                margin-top:0px;
+            }
+        }
+
+        > div {
+           gap: 16px;
+        }
+
+    }
+}

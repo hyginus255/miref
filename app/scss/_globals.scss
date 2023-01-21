@@ -110,6 +110,13 @@ h5{
     &-ai-c{
         align-items: center;
     }
+
+    &-fd-c{
+        flex-direction: column;
+    }
+    &-fd-r{
+        flex-direction: row;
+    }
 }
 
 //text align center

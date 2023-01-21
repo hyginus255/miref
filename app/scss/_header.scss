@@ -1,11 +1,22 @@
 .header{
 
-    padding: 20px 0;
+    padding: 1rem 0;
+
+    @include breakpoint-up(large){
+        padding: 1.25rem 0;
+    }
 
     > nav{
-        padding: 0 32px;
-        max-width : 1280px;
+        padding-top: 0;
+        padding-right: 0.75rem;
+        padding-left: 1rem;
+        padding-bottom: 0;
+        max-width : 21.44rem;
         margin:0 auto;
+
+        @include breakpoint-up(large){
+            max-width : 80rem;
+        }
     }
 
     &__logo{

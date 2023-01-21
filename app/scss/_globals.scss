@@ -14,14 +14,65 @@ body{
     line-height: 1.2;
     font-size: $text-xl;
     font-family: 'Inter', sans-serif;
-    max-width: 1440px;
-    margin:0 auto;
 }
 
 a, a:visited, a:hover{
     text-decoration: none;
 }
 
+//Texts
+
+p{
+    margin:0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.4;
+  color: $gray-900;
+  margin:0;
+}
+
+h1{
+    font-size: 2.25rem;
+    letter-spacing: -2px;
+
+    @include breakpoint-up(large){
+        font-size: 3.75rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+
+.section{
+    padding-top: 4rem;
+    padding-right: 0px;
+    padding-bottom: 4rem;
+    padding-left:0px;
+
+    @include breakpoint-up(large){
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.container{
+    padding-top: 0;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-left:1rem;
+    max-width : 23.44rem;
+    margin:0px auto;
+
+    @include breakpoint-up(large){
+        padding-right: 2rem;
+        padding-left: 2rem;
+        max-width : 80rem;
+    }
+}
 
 
 //flexbox styles
@@ -40,16 +91,21 @@ a, a:visited, a:hover{
 //buttons
 
 .btn-primary-xl{
-    padding:0.75rem 1.75em;
+    padding:0.75rem 1.75rem;
     border-radius: 8px;
     cursor: pointer;
     background-color: $primary-400;
-    font-size: $text-lg;
+    font-size: $text-md;
     color: $white;
     border: 1px solid $primary-400;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0px;
-    line-height: 24px;
+    line-height: 1.5rem;
+
+    @include breakpoint-up(large){
+        font-size: $text-lg;
+        font-weight: 500;
+    }
 
     &:hover{
         background-color: $primary-300;

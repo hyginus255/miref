@@ -16,7 +16,7 @@
 
     }
 
-    &__item, &__item_2{
+    &__item{
 
         margin-top: 3rem;
         margin-bottom: 3rem;
@@ -25,18 +25,12 @@
         @include breakpoint-up(large){
             flex-direction: row;
             margin-top: 6rem;
+            align-items: center;
         }
 
     }
 
-    &__item_2{
-
-        @include breakpoint-up(large){
-            flex-direction: row-reverse;
-        }
-    }
-
-    &__item_text, &__item_text_2{
+    &__item_text{
 
         p{
             margin-top: 0.5rem;
@@ -46,50 +40,43 @@
         }
         @include breakpoint-up(large){
             flex: 1;
-            margin-right: 6rem;
+            margin-right: 96px;
         }
     }
 
-    &__item_text_2{
+
+    &__image{
 
         @include breakpoint-up(large){
-            margin-right: 0px;
-            margin-left: 6rem;
-        }
-    }
-
-    &__image_1, &__image_2{
-        height: 16.19rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-top: 40px;
-
-        @include breakpoint-up(large){
+            position: relative;
             flex: 1;
-            height: 32rem;
-            margin-top: 0px;
+            height: 512px;
+        }
+
+        img{
+
+            margin-top: 40px;
+
+            @include breakpoint-up(large){
+                position: absolute;
+                width: auto;
+                height: 100%;
+                right: -7.1rem;
+                margin-top: 0px;
+            }
         }
     }
 
-    &__image_1{
-
-        background-image: url("/assets/Images/feature_image_mobile_1.svg");
+    > div:nth-child(3){
 
         @include breakpoint-up(large){
-            background-image: url("/assets/Images/feature_image_web_1.svg");
+            flex-direction: row-reverse;
         }
+
     }
 
-    &__image_2{
 
-        background-image: url("/assets/Images/Refferer_Dashboard_mobile.svg");
 
-        @include breakpoint-up(large){
-
-            background-image: url("/assets/Images/feature_image_web_1.svg");
-        }
-    }
 
     &__list{
 
@@ -102,5 +89,19 @@
         p{
             margin-top: 0px;
         }
+    }
+}
+
+#feature_image_2{
+    @include breakpoint-up(large){
+        right:0px;
+        left: -7.1rem;
+    }
+}
+
+#feature_text_2{
+    @include breakpoint-up(large){
+    margin-right:0px;
+    margin-left: 96px;
     }
 }

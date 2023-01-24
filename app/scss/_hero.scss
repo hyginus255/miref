@@ -44,7 +44,7 @@
 
         h1{
             @include breakpoint-up(large){
-                width: 53.75rem;
+                width: 860px;
                 margin:0px auto;
             }
 
@@ -52,20 +52,22 @@
                 color: $primary-400;
             }
         }
+
     }
 
     &__image{
-        background-image: url("/assets/Images/home_hero_image_mobile.svg");
-        height: 12.64rem;
-        background-position: bottom center;
-        background-size: contain;
-        width: 100%;
-        background-repeat: no-repeat;
+        // background-image: url("/assets/Images/home_hero_image_mobile.svg");
+        // height: 12.64rem;
+        // background-position: bottom center;
+        // background-size: contain;
+        // width: 100%;
+        // background-repeat: no-repeat;
 
-        @include breakpoint-up(large){
-            background-image: url("/assets/Images/home_hero_image.svg");
-            height: 604px;
-        }
+        // @include breakpoint-up(large){
+        //     background-image: url("/assets/Images/home_hero_image.svg");
+        //     height: 604px;
+        // }
+
     }
 
     &__blur{

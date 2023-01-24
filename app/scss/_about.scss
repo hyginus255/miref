@@ -1,0 +1,68 @@
+//about heading text width
+#text_width_about{
+    @include breakpoint-up(large){
+        width: 64rem;
+    }
+}
+
+.about{
+
+    //background-color: $gray-50;
+
+    &__heading{
+
+        p{
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+
+        @include breakpoint-up(large){
+            text-align: center;
+            max-width: 33.14rem;
+        }
+    }
+
+    &__content{
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+        }
+        
+    }
+
+    &__content_text{
+
+        p{
+            margin-top: 16px;
+            font-weight: 300;
+        }
+
+        @include breakpoint-up(large){
+            flex: 1;
+            margin-top: 18px;
+        }
+    }
+
+    &_content_image{
+
+        @include breakpoint-up(large){
+
+            position: relative;
+            flex: 1;
+            img{
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                right: -7.1rem;
+            }
+
+        }
+
+    }
+
+}

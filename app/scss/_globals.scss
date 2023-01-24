@@ -14,10 +14,15 @@ body{
     line-height: 1.5rem;
     font-size: $text-xl;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 a, a:visited, a:hover{
     text-decoration: none;
+}
+
+.active{
+    color:$primary-500 !important;
 }
 
 //Texts
@@ -25,6 +30,7 @@ a, a:visited, a:hover{
 p{
     margin:0;
     line-height: 1.5rem;
+    color: $gray-500;
 }
 
 h1,
@@ -116,6 +122,9 @@ h5{
     }
     &-fd-r{
         flex-direction: row;
+    }
+    &-fd-rr{
+        flex-direction: row-reverse;
     }
 }
 

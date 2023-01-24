@@ -27,7 +27,7 @@
 
             <div class="header__links hide-for-mobile">
                 <!-- <a href="#">Home</a> -->
-                <a href="#">About Us</a>
+                <a href="/about.html">About Us</a>
                 <a href="#">For Business</a>
                 <a href="#">For Refferers</a>
                 <a href="#">FAQ</a>
@@ -46,7 +46,9 @@
                 <p>Open up your business to thousands of freelance marketers or join to get instant payment when you refer customer to a business</p>
                 <a href="#" class="btn-primary">Stay Informed</a>
             </div>
-            <div class="hero__image"></div>
+            <!-- <div class="hero__image"></div> -->
+            <img src="/assets/Images/home_hero_image.svg" class="hero__image hide-for-mobile" alt="Hero Image">
+            <img src="/assets/Images/home_hero_image_mobile.svg" class="hero__image hide-for-desktop" alt="Hero Image">
         </div>
         <img src="/assets/Images/hero layer blur.png" alt="" class="hero__blur hide-for-mobile">
     </section>
@@ -93,10 +95,13 @@
                     <p>Connect your business with real people to source customers for you in and outside your social circle.</p>
                 </div>
             </div>
-            <div class="features__image_1"></div>
+            <div class="features__image">
+                <img class="hide-for-desktop" src="/assets/Images//feature_image_mobile_1.svg" alt="">
+                <img class="hide-for-mobile" src="/assets/Images/feature_image_web_1.svg" alt="">
+            </div>
         </div>
-        <div class="features__item_2 flex container">
-            <div class="features__item_text_2">
+        <div class="features__item flex container">
+            <div class="features__item_text" id="feature_text_2">
                 <img src="/assets/Images//Featured icon black.svg" alt="">
                 <h5>Miref Personal Account</h5>
                 <p>Everyday, we casually refer our friends, families and acquaintances to patronize businesses that we trust, Miref is here to help you earn from those referrals.</p>
@@ -116,10 +121,14 @@
                     <p>We monetize your social referrals; you chose your own bargain.</p>
                 </div>
             </div>
-            <div class="features__image_2"></div>
+            <div class="features__image">
+                <img class="hide-for-desktop" src="/assets/Images/feature_image_mobile_2.svg" alt="">
+                <img id="feature_image_2" class="hide-for-mobile" src="/assets/Images/feature_image_web_2.svg" alt="">
+            </div>
         </div>
     </section>
 
+    <!-- Newsletter Section -->
     <section class="newsletter section">
         <div class="container">
             <div class="newsletter__card">
@@ -137,6 +146,7 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer section">
         <div class="container">
             <div class="flex footer__top flex-fd-c">

@@ -21,8 +21,8 @@
 
         p{
             font-weight: 300;
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 1.25rem;
+            line-height: 1.88rem;
             color: $gray-500;
             margin-top: 1rem;
 
@@ -44,7 +44,7 @@
 
         h1{
             @include breakpoint-up(large){
-                width: 860px;
+                width: 53.75rem;
                 margin:0px auto;
             }
 
@@ -55,24 +55,15 @@
 
     }
 
-    &__image{
-        // background-image: url("/assets/Images/home_hero_image_mobile.svg");
-        // height: 12.64rem;
-        // background-position: bottom center;
-        // background-size: contain;
-        // width: 100%;
-        // background-repeat: no-repeat;
-
-        // @include breakpoint-up(large){
-        //     background-image: url("/assets/Images/home_hero_image.svg");
-        //     height: 604px;
-        // }
-
-    }
-
     &__blur{
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    &__vector{
+        position: absolute;
+        top: 9.31rem;
+        left: 72.64rem;
     }
 }

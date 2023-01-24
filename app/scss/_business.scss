@@ -1,0 +1,144 @@
+#text_width_business{
+
+    @include breakpoint-up(large){
+        width: 54.25rem;
+    }
+    
+}
+
+#sub_text_width_business{
+
+    @include breakpoint-up(large){
+        width: 51.25rem;
+    }
+
+}
+
+#business_hero_image_desktop{
+    @include breakpoint-up(large){
+        width: 61.5rem;
+        height: auto;
+        margin:0px auto;
+    }
+}
+
+.business{
+
+
+    &__container{
+        @include breakpoint-up(large){
+            flex-direction: row;
+        }
+    }
+
+    &__content{
+        @include breakpoint-up(large){
+            margin-right: 6rem;
+            flex: 1;
+        }
+    }
+
+    &__text_item{
+        margin-bottom: 3rem;
+
+        @include breakpoint-up(large){
+            margin-bottom: 4rem;
+        }
+
+        img{
+            margin-bottom: 1.5rem;
+        }
+
+        p{
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+
+       > ul > li{
+        color: $gray-500;
+        margin-bottom: 0.75rem;
+        font-weight: 300;
+       }
+    }
+
+    &__image_container{
+        position: relative;
+        @include breakpoint-up(large){
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            @include breakpoint-up(large){
+                position: absolute;
+            }
+        }
+    }
+}
+
+.business_how_it_works{
+
+    background-color: $gray-50;
+
+    &__container{
+        @include breakpoint-up(large){
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__image_container{
+        margin-bottom: 2.5rem;
+        @include breakpoint-up(large){
+            margin-bottom: 0px;
+        }
+    }
+
+    &__list{
+        padding: 0px 1rem;
+
+        > div:last-child{
+            margin-bottom: 0px;
+        }
+
+        @include breakpoint-up(large){
+            margin-left: 2.5rem;
+            padding: 0px 2rem;
+        }
+    }
+
+    &__list_item{
+
+        margin-bottom: 2.5rem;
+
+        p{
+            margin-left: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        img{
+            height: 2.5rem;
+            width: auto;
+        }
+
+        @include breakpoint-up(large){
+
+            align-items: center;
+
+            p{
+                font-size: 1.88rem;
+                line-height: 2.38rem;
+            }
+            img{
+                height: 3rem;
+            }
+        }
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,84 @@
+.contact{
+
+    &__container{
+        @include breakpoint-up(large){
+            flex-direction: row;
+            justify-content: space-around;
+            #address_info{
+                width: 268px;
+            }
+        }
+    }
+
+    &__info_item{
+        text-align: center;
+        gap:8px;
+        margin-bottom: 24px;
+    }
+
+    &_info{
+        color: $primary-500;
+    }
+}
+
+.form{
+
+    background-color: $gray-50;
+
+    &__container{
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__image_container{
+
+        @include breakpoint-up(large){
+            width: 576px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__form{
+
+        @include breakpoint-up(large){
+            margin-left: 64px;
+            padding:89px 48px;
+        }
+
+        h5{
+            margin-bottom: 20px;
+            margin-top: 64px;
+            @include breakpoint-up(large){
+                margin-top: 0px;
+            }
+        }
+
+        p{
+            margin-bottom: 48px;
+        }
+
+        #submit_button{
+            margin-top: 24px;
+            width: 100%;
+        }
+    }
+
+    &__input{
+        margin-bottom: 16px;
+    }
+
+    &__input_group{
+        @include breakpoint-up(large){
+            gap:16px;
+            flex-direction: row;
+        }
+    }
+
+}

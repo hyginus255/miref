@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::after, *::before {
@@ -75,6 +76,11 @@ h5 {
     font-size: 1.875rem;
     line-height: 2.375rem;
   }
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .section {
@@ -169,11 +175,28 @@ h5 {
   padding: 10px 14px;
   width: 100%;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #D0D5DD;
   height: 44px;
   font-size: 16px;
   line-break: 24px;
   color: #101828;
+}
+
+textarea {
+  border-radius: 8px;
+  font-size: 16px;
+  line-break: 24px;
+  color: #101828;
+  padding: 10px 14px;
+  border: 1px solid #D0D5DD;
+  width: 100%;
+}
+
+label {
+  color: #344054;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 63.9375em) {
@@ -306,6 +329,9 @@ h5 {
   position: absolute;
   top: 9.31rem;
   left: 72.64rem;
+}
+.hero__map_container {
+  height: 400px;
 }
 
 .social_proof {
@@ -758,5 +784,96 @@ h5 {
   }
   .business_how_it_works__list_item img {
     height: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  #text_width_refferers {
+    width: 931px;
+  }
+}
+
+@media (min-width: 64em) {
+  #sub_text_width_refferers {
+    width: 820px;
+  }
+}
+
+@media (min-width: 64em) {
+  #refferers_hero_vector_image {
+    top: 9.32rem;
+    left: 73.64rem;
+  }
+}
+
+#heading_span_refferers {
+  color: #DA4033 !important;
+}
+
+@media (min-width: 64em) {
+  .contact__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contact__container #address_info {
+    width: 268px;
+  }
+}
+.contact__info_item {
+  text-align: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.contact_info {
+  color: #6941DA;
+}
+
+.form {
+  background-color: #F9FAFB;
+}
+@media (min-width: 64em) {
+  .form__container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 64em) {
+  .form__image_container {
+    width: 576px;
+  }
+}
+.form__image_container img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 64em) {
+  .form__form {
+    margin-left: 64px;
+    padding: 89px 48px;
+  }
+}
+.form__form h5 {
+  margin-bottom: 20px;
+  margin-top: 64px;
+}
+@media (min-width: 64em) {
+  .form__form h5 {
+    margin-top: 0px;
+  }
+}
+.form__form p {
+  margin-bottom: 48px;
+}
+.form__form #submit_button {
+  margin-top: 24px;
+  width: 100%;
+}
+.form__input {
+  margin-bottom: 16px;
+}
+@media (min-width: 64em) {
+  .form__input_group {
+    gap: 16px;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

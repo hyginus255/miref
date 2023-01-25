@@ -1,0 +1,22 @@
+#text_width_refferers{
+    @include breakpoint-up(large){
+        width: 931px;
+    }
+}
+
+#sub_text_width_refferers{
+    @include breakpoint-up(large){
+        width: 820px;
+    }
+}
+
+#refferers_hero_vector_image{
+    @include breakpoint-up(large){
+        top: 9.32rem;
+        left: 73.64rem;
+    }
+}
+
+#heading_span_refferers{
+    color: $secondary-500!important;
+}

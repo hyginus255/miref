@@ -18,7 +18,7 @@
 
     &__container{
         @include breakpoint-up(large){
-            // padding:0px 164px;
+            padding:0px 200px;
         }
     }
 
@@ -27,10 +27,12 @@
         padding-top: 32px;
         border-bottom: 1px solid #E4E7EC;
         p{
-            padding-right: 52px;
-            text-align: justify;
+            padding-right: 48px;
+            padding-left: 12px;
+            // text-align: justify;
             margin-top: 12px;
             font-weight: 300;
+            display: none;
         }
         img{
             height: 40px;
@@ -40,7 +42,7 @@
         @include breakpoint-up(large){
             p{
                 margin-top:8px;
-                padding-right: 96px;
+                padding-right: 80px;
             }
             img{
                 height: 48px;
@@ -51,6 +53,14 @@
     &__header{
         align-content: center;
         justify-content: space-between;
+    }
+
+    &__close{
+        display: none;
+    }
+
+    &__open{
+
     }
 
 }

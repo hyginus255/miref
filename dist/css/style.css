@@ -266,6 +266,16 @@ label {
 .header__menu.open > span:last-child {
   transform: rotate(-45deg);
 }
+@media (max-width: 39.9375em) {
+  .header__links {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .header__links a {
   color: #667085;
   font-size: 0.875em;
@@ -276,9 +286,28 @@ label {
 .header__links a:not(:last-child) {
   margin-right: 32px;
 }
+@media (max-width: 39.9375em) {
+  .header__links a:not(:last-child) {
+    margin-right: 0px;
+  }
+}
 .header__links a:hover {
   color: #6941DA;
   transition: color 200ms ease-in-out;
+}
+
+@media (max-width: 39.9375em) {
+  .background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 53px;
+    background: rgba(16, 24, 40, 0.6);
+    left: 0px;
+    z-index: 1;
+    overflow: hidden;
+    padding: 20px;
+  }
 }
 
 .hero {

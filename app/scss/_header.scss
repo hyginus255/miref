@@ -51,6 +51,16 @@
 
 
     &__links{
+
+        @include breakpoint-down(small){
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
         a{
             color: $gray-500;
             font-size: $text-md;
@@ -60,6 +70,7 @@
 
             &:not(:last-child){
                 margin-right: 32px;
+                @include breakpoint-down(small){margin-right: 0px;}
             }
 
             &:hover{
@@ -69,3 +80,19 @@
         }
     }
 }
+
+.background{
+
+    @include breakpoint-down(small){
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 53px;
+        background: rgba(16, 24, 40, 0.6);
+        left: 0px;
+        z-index: 1;
+        overflow: hidden;
+        padding:20px;
+    }
+}
+

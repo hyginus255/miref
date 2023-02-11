@@ -10,8 +10,6 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/SMTP.php';
 
-include 'resize_class.php';
-
 function redirect($url) {
     ob_start();
     header('Location: ' . $url);
@@ -88,7 +86,7 @@ function sendMail($fullname, $subject, $mail_body, $client, $email, $ccArray=arr
         $mail->Port = 25;                                   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('hello@miref.app', 'Miref | Miref Portal');
+        $mail->setFrom('hello@miref.app', 'Nenka from Miref');
         $mail->addAddress($email, $fullname);     //Add a recipient
         $mail->addReplyTo('wilsonabah@gmail.com', $client);
     
@@ -612,11 +610,11 @@ function convert_number_to_words($number) {
     return $string;
 }
 
-function general_mailtemplate($client,$name,$body, $app_url = "https://mindsourcingoa.com/nsbpp"){
+function general_mailtemplate($client,$name,$body, $app_url = "https://miref.app"){
     return "
     <html>
     <head>
-      <title>NSBPP | Mail</title>
+      <title>Miref | Mail</title>
     <style>
     
       body {
@@ -666,7 +664,7 @@ function general_mailtemplate($client,$name,$body, $app_url = "https://mindsourc
       .footer {
         padding-top: 20px;
         padding-bottom: 10px;
-        background-color: #228d0d ;
+        background-color: #6941DA ;
         border-radius: 13px;
         text-align: center;
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
@@ -687,30 +685,22 @@ function general_mailtemplate($client,$name,$body, $app_url = "https://mindsourc
     <body>
         <div class='header'>
           <div class='img'>
-               <img src='{$app_url}/assets/images/naslogo.png' alt='NSBPP' class='logo-default'/>
+               <img src='assets/Images/Logo.svg' alt='Miref' class='logo-default'/>
           </div>
         </div>
         <div class='body'>
            <h4 align='center'><strong>{$client}</strong></h4>
-           <span style='color:#228d0d; font-size: 12px; margin-left:50px'><i>&#8220;Ensuring Transparency and Value for money&#8221;</i></span>
+           <span style='color:#228d0d; font-size: 12px; margin-left:50px'><i>&#8220; Where Businesses and Referrers meet &#8221;</i></span>
            <div style='margin-left: 10px; margin-bottom: 10px;' >
              <p style='margin-left:20px;'><strong>Dear {$name},</strong></p>
              <div style='Margin-left: 20px; Margin-right: 20px; '>
                  <p>{$body}</p> 
              </div>
-             <p><br></p>
-             <p>Regards,</p> 
-             <b> 
-                <p> NSBPP </p> 
-                <span style='color:#228d0d; font-size: 12px; margin-left:50px'><em>&#8220;Ensuring Transparency and Value for money&#8221;</em></span>
-             </b>
-             <p>For further clarification please send an email to <br>
-             <a href='mailto:info@tsl.com.ng'>info@tsl.com.ng</a>
-             </p>
-          </div>  
+             
+           </div>  
         </div>
         <div class='footer'>
-          <p>&copy; <a href='#' target='_blank' style='color:white'> SmartApps I.T Limited </a> - 2021. </p>            
+          <p>&copy; <a href='#' target='_blank' style='color:white'> Design Ideation </a> - 2023. </p>            
         </div>
     
         </body>

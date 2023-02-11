@@ -1,3 +1,6 @@
+<?php
+include 'conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -10,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/toast.css">
 </head>
 <body>
 
@@ -32,7 +34,7 @@
                     <a href="about.html">About Us</a>
                     <a href="business.html">For Business</a>
                     <a href="Refferers.html">For Refferers</a>
-                    <a class="active" href="faq.html">FAQ</a>
+                    <a class="active" href="faq.php">FAQ</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
@@ -60,22 +62,20 @@
 
     <div class="faq section">
         <div class="faq__container container flex flex-fd-c">
+            <?php
+            $qfaq = mysqli_query($conn, "select * from faq where status1 = 1");
+            while($getfaq==mysqli_fetch_array($qfaq)){
+            ?>
             <div class="faq__item">
                 <div class="faq__header flex">
-                    <h6>How can I earn with Miref</h6>
+                    <h6><?php echo $getfaq['question']?></h6>
                     <img src="assets/Images/featured_icon_close.svg" class="faq__close" alt="Feature Icon">
                     <img src="assets/Images/featured_icon_open.svg" class="faq__open" alt="Feature Icon">
                 </div>
-                <p class="faq__text">Simply Create an account on Miref, your account comes with a personalized wallet and a unique referral code. Just copy your referral code and share with friends, convince them to patronize any of the thousands of businesses profiled on Miref, make sure your referred customers submit your Miref code every time they transact business on your referral. Your account gets credited automatically as soon as any transaction is confirmed with your Miref code by the business owner.</p>
+                <p class="faq__text"><?php echo $getfaq['answer']?></p>
             </div>
-            <div class="faq__item">
-                <div class="faq__header flex">
-                    <h6>Who can benefit from using Miref ?</h6>
-                    <img src="assets/Images/featured_icon_close.svg" class="faq__close" alt="Feature Icon">
-                    <img src="assets/Images/featured_icon_open.svg" class="faq__open" alt="Feature Icon">
-                </div>
-                <p class="faq__text" >Simply Create an account on Miref, your account comes with a personalized wallet and a unique referral code. Just copy your referral code and share with friends, convince them to patronize any of the thousands of businesses profiled on Miref, make sure your referred customers submit your Miref code every time they transact business on your referral. Your account gets credited automatically as soon as any transaction is confirmed with your Miref code by the business owner.</p>
-            </div>
+            <?php } ?>
+            
         </div>
     </div>
 
@@ -91,9 +91,9 @@
                 <div>
                     <h5>Subscribe to stay informed</h5>
                     <p>Be the first to know when it’s launched</p>
-                    <form action="#" method="post" class="flex">
-                        <input type="text" name="name" placeholder="Name" class="input">
-                        <input type="email" name="email" placeholder="Email" class="input">
+                    <form action="#" class="flex">
+                        <input type="text" placeholder="Name" class="input">
+                        <input type="text" placeholder="Email" class="input">
                         <input type="submit" value="submit" class="btn-secondary newsletter__submit">
                     </form>
                     <p class="newsletter__help_text">We care about your data in our privacy policy</p>
@@ -160,25 +160,5 @@
     </footer>
 
 <script src="app/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-    $(document).ready(function(){
-    $("form").on("submit", function(event){
-        event.preventDefault();
- 
-        var formValues= $(this).serialize();
- 
-        $.post("newsletter.php", formValues, function(data){
-            // Display the returned data in browser
-            console.log(data);
-            const toast = document.getElementById('toast');
-
-            toast.querySelector('.toast-body').innerHTML = "Thank you for your interest. We will get back shortly";
-            toast.classList.add('visible');
-            // $("#toast").html(data);
-        });
-    });
-});
-</script>
 </body>
 </html>

@@ -10,39 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        .toast {
-            position: fixed;
-            top: 0;
-            right: 0;
-
-            transform: translateY(100%);
-            opacity: 0;
-
-            transition:
-                opacity 500ms,
-                transform 500ms;
-        }
-
-        .toast.visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .toast-body {
-            margin: 28px;
-            padding: 20px 24px;
-
-            font-size: larger;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-            background-color: lightskyblue;
-            color: darkblue;
-
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="dist/css/toast.css">
 </head>
 <body>
 
@@ -175,8 +143,8 @@
                     <h5>Subscribe to stay informed</h5>
                     <p>Be the first to know when it’s launched</p>
                     <form action="" method="post" class="flex">
-                        <input type="text" name="name" placeholder="Name" class="input">
-                        <input type="email" name="email" placeholder="Email" class="input">
+                        <input type="text" required name="name" placeholder="Name" class="input">
+                        <input type="email" required name="email" placeholder="Email" class="input">
                         <input type="submit" value="submit" class="btn-secondary newsletter__submit">
                     </form>
                     <p class="newsletter__help_text">We care about your data in our privacy policy</p>
@@ -258,21 +226,10 @@
 
             toast.querySelector('.toast-body').innerHTML = "Thank you for your interest. We will get back shortly";
             toast.classList.add('visible');
-            //$("#toast").html(data);
+            // $("#toast").html(data);
         });
     });
 });
-</script>
-<script>
-    // const toast = document.getElementById('toast');
-
-    // document.getElementById('showBtn').addEventListener('click', function() {
-    //     toast.querySelector('.toast-body').innerHTML = "Success";
-    //     toast.classList.add('visible');
-    // });
-    document.getElementById('hideBtn').addEventListener('click', function() {
-        toast.classList.remove('visible');
-    });
 </script>
 </body>
 </html>

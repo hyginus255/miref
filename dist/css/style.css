@@ -543,11 +543,11 @@ label {
     flex-direction: row;
   }
 }
-.newsletter__card input[type=text] {
+.newsletter__card input[type=text], .newsletter__card input[type=email] {
   margin-top: 8px;
 }
 @media (min-width: 64em) {
-  .newsletter__card input[type=text] {
+  .newsletter__card input[type=text], .newsletter__card input[type=email] {
     margin-right: 8px;
     margin-top: 0px;
     margin-bottom: 0px;

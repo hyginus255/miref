@@ -151,9 +151,9 @@ include 'conn.php';
             <div class="footer__bottom flex flex-fd-c">
                 <p>© 2023 Miref. All rights reserved.</p>
                 <div class="flex">
-                    <a href="#"><img src="assets/Images/Twitter icon.svg" alt=""></a>
-                    <a href="#"><img src="assets/Images/LinkedIn  icon.svg" alt=""></a>
-                    <a href="#"><img src="assets/Images/Facebook icon.svg" alt=""></a>
+                    <a target="_blank" href="https://twitter.com/mirefApp"><img src="assets/Images/Twitter icon.svg" alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/miref.app/"><img src="assets/Images/instagram.svg" alt=""></a>
+                    <a target="_blank" href="https://web.facebook.com/mirefapp"><img src="assets/Images/Facebook icon.svg" alt=""></a>
                 </div>
             </div>
         </div>
